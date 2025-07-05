@@ -1,1 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benaya Chisale - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Sansation Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="https://wordpuzzlebrain.netlify.app/assets/bc.jpg">
+    <style>
+        @font-face {
+            font-family: 'garet';
+            src: url("https://wordpuzzlebrain.netlify.app/fonts/bold.otf");
+        }
+        @font-face {
+            font-family: 'regular';
+            src: url("https://wordpuzzlebrain.netlify.app/fonts/regular.otf");
+        }
+        body {
+            font-family: 'Sansation', sans-serif;
+            text-align: center;
+            width: auto;
+        }
+        .sansation-light { font-weight: 300; font-style: normal; }
+        .sansation-regular { font-weight: 400; font-style: normal; }
+        .sansation-bold { font-weight: 700; font-style: normal; }
+        .sansation-light-italic { font-weight: 300; font-style: italic; }
+        .sansation-regular-italic { font-weight: 400; font-style: italic; }
+        .sansation-bold-italic { font-weight: 700; font-style: italic; background: #8a8a8a; }
 
+        /* Navbar Styles */
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 1rem 0;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #007bff !important;
+        }
+        .navbar-toggler {
+            border-color: #fff;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: url('https://leadschool.in/wp-content/uploads/2022/04/shutterstock_1777292972.jpg') no-repeat center 30%;
+            background-size: cover;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+        }
+
+        /* General Section */
+        .section {
+            padding: 60px 0;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-img-top {
+            border-radius: 15px 15px 0 0;
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #414141;
+            color: #fff;
+            border-radius: 50px 50px 0 0;
+        }
+        .contact-section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-section a:hover {
+            color: #fff;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #414141;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 576px) {
+            .hero-section h1 { font-size: 2rem; }
+            .hero-section p { font-size: 1rem; }
+            .card-img-top { height: 150px; }
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            text-transform: uppercase;
+            font-family: 'Sansation', sans-serif;
+            font-weight: 700;
+        }
+        a { color: #fff; }
+        .garet { font-family: 'garet'; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Benaya Chisale</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="bi bi-house me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="bi bi-person me-1"></i>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services"><i class="bi bi-gear me-1"></i>Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>Benaya Chisale</h1>
+            <p>Professional Teacher & Full-Stack Web Developer</p>
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="card">
+                <img src="https://wordpuzzlebrain.netlify.app/assets/bc.jpg" class="card-img-top" alt="Benaya Chisale">
+                <div class="card-body">
+                    <h3 class="card-title">Who I Am</h3>
+                    <p class="card-text">Born on January 9, I am Benaya Chisale, a dedicated professional teacher and a passionate full-stack web developer. With expertise in JavaScript, PHP, Python, and Java frameworks, I craft innovative and responsive web solutions tailored to modern business needs.</p>
+                    <p>My dual background in education and technology allows me to communicate complex ideas clearly and deliver user-friendly digital experiences. I am committed to empowering businesses through cutting-edge web development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Your Business Needs a Website</h2>
+            <p class="text-center mb-5">In today’s digital era, a professional website is the cornerstone of success for small businesses and companies. It enhances credibility, expands your reach, and drives growth. Let me help you establish a powerful online presence with my expertise in full-stack development.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://thumbs.dreamstime.com/b/serious-african-male-interpreter-skype-teacher-wearing-headphones-looking-laptop-talking-online-chat-black-man-tutor-154906735.jpg?w=450" class="card-img-top" alt="Professional Online Teaching">
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Online Teaching</h5>
+                            <p class="card-text">Engaging and personalized online lessons for your children, delivered by a certified teacher. Foster academic excellence with tailored curricula in a digital classroom.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.tynker.com/blog/wp-content/uploads/20230504104448/Coding-and-Education.jpg" class="card-img-top" alt="Coding Mentorship">
+                        <div class="card-body">
+                            <h5 class="card-title">Coding Mentorship</h5>
+                            <p class="card-text">Guiding beginners on their coding journey with hands-on mentorship in JavaScript, PHP, Python, and Java. Build a strong foundation for a successful tech career.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://as1.ftcdn.net/jpg/07/65/48/28/1000_F_765482818_xS6AWz4NH3spl69UoctUZDERA9EdwPoS.jpg" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Custom websites built with JavaScript, PHP, Python, and Java frameworks, ensuring scalability and performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://admin.12grids.com/uploads/blogs/original_cover_images/Webp/Future_Of_Responsive_Web_Design_12Grids.webp" class="card-img-top" alt="Responsive Design">
+                        <div class="card-body">
+                            <h5 class="card-title">Responsive Design</h5>
+                            <p class="card-text">Mobile-first, iPhone-inspired layouts that look stunning on all devices, boosting user engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://www.dotmagazine.online/_Resources/Persistent/a/d/d/2/add2be23cea4812428457e3a7ccc6352eeb93117/iStock-Business%20-1186614184_web-720x405.jpeg" class="card-img-top" alt="Consulting">
+                        <div class="card-body">
+                            <h5 class="card-title">Digital Consulting</h5>
+                            <p class="card-text">Strategic guidance to help businesses leverage the power of the web for growth and visibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Let’s Build Your Future</h3>
+                    <p>Ready to elevate your business with a professional website? Contact me today to discuss your project needs.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:+265992605260">+265 992 605 260</a> (Call/WhatsApp)</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i><a href="mailto:chisalebenaya@gmail.com">chisalebenaya@gmail.com</a></li>
+                        <li><i class="bi bi-facebook me-2"></i><a href="https://www.facebook.com/benaya.chisale" target="_blank">Benaya Chisale</a></li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/benaya.chisale" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://wa.me/+265992605260" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Benaya Chisale. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
